@@ -1,0 +1,12 @@
+.git
+.gitignore
+.github
+.dockerignore
+Dockerfile
+README.md
+*.local
+__pycache__
+.DS_Store
+node_modules
+.vscode
+.idea
