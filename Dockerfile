@@ -13,12 +13,12 @@ RUN go mod download || go mod tidy
 COPY . .
 
 # Build binary
-RUN CGO_ENABLED=0 GOOS=linux go build -ldflags="-w -s" -o Ldag .
+RUN CGO_ENABLED=0 GOOS=linux go build -ldflags="-w -s" -o ldag .
 
 # Runtime stage
 FROM gcr.io/distroless/static-debian12:nonroot
 
-COPY --from=builder /app/Ldag /app/Ldag
+COPY --from=builder /app/ldag /app/ldag
 
 EXPOSE 8080
 
