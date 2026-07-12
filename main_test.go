@@ -35,7 +35,7 @@ func TestIndexHandlerRendersHostName(t *testing.T) {
 	if rec.Code != 200 {
 		t.Fatalf("status = %d, want 200", rec.Code)
 	}
-	if !strings.Contains(body, "<h1>marvin</h1>") {
+	if !strings.Contains(body, "<h1>Marvin</h1>") {
 		t.Fatalf("body does not contain rendered name: %s", body)
 	}
 	if !strings.Contains(body, "|=|=|=|=|=|=|=|=|=|") {
